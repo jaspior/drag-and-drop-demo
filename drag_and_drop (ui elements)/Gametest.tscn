@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=3 uid="uid://j46qt2qt3odk"]
+
+[ext_resource type="Script" path="res://drag_and_drop (ui elements)/gametest.gd" id="1_a85cm"]
+[ext_resource type="PackedScene" uid="uid://4wg3gbl2ttog" path="res://drag_and_drop (ui elements)/drag_and_drop.tscn" id="1_xqyec"]
+[ext_resource type="Texture2D" uid="uid://dnkr53e4vh5ge" path="res://drag_and_drop (ui elements)/azul.png" id="3_yq65x"]
+[ext_resource type="Texture2D" uid="uid://cvvmucjf8mefj" path="res://drag_and_drop (ui elements)/vermelho.png" id="4_8i0hw"]
+[ext_resource type="Texture2D" uid="uid://dddsaf81cdk53" path="res://drag_and_drop (ui elements)/amarelo.png" id="5_cy8dj"]
+[ext_resource type="Texture2D" uid="uid://bdcs6e5uso0ar" path="res://drag_and_drop (ui elements)/verde.png" id="6_xjrcj"]
+
+[node name="Teste" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_a85cm")
+
+[node name="Images" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 259.0
+offset_bottom = 321.0
+theme_override_constants/separation = 40
+
+[node name="Blue" parent="Images" instance=ExtResource("1_xqyec")]
+layout_mode = 2
+texture = ExtResource("3_yq65x")
+key = "blue"
+type = 0
+
+[node name="Red" parent="Images" instance=ExtResource("1_xqyec")]
+layout_mode = 2
+texture = ExtResource("4_8i0hw")
+key = "red"
+type = 0
+
+[node name="Yellow" parent="Images" instance=ExtResource("1_xqyec")]
+layout_mode = 2
+texture = ExtResource("5_cy8dj")
+key = "yellow"
+type = 0
+
+[node name="Green" parent="Images" instance=ExtResource("1_xqyec")]
+layout_mode = 2
+texture = ExtResource("6_xjrcj")
+key = "green"
+type = 0
+
+[node name="Texts" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 317.0
+offset_right = 576.0
+offset_bottom = 321.0
+mouse_filter = 2
+theme_override_constants/separation = 40
+
+[node name="Blue" parent="Texts" instance=ExtResource("1_xqyec")]
+layout_mode = 2
+key = "blue"
+text = "azul"
+type = 1
+
+[node name="DragAndDrop" parent="Texts" instance=ExtResource("1_xqyec")]
+layout_mode = 2
+key = "yellow"
+text = "amarelo"
+type = 1
+
+[node name="DragAndDrop2" parent="Texts" instance=ExtResource("1_xqyec")]
+layout_mode = 2
+key = "red"
+text = "vermelho"
+type = 1
